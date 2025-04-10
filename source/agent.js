@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const AI_API_URL = "https://api.groq.com/openai/v1/chat/completions";
-const AI_API_KEY = "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";
+const AI_API_KEY = process.env.GROQ_API_KEY;
 
 export async function callAIModel(conversation) {
     try {
